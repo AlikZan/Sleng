@@ -156,7 +156,7 @@
         @media (max-width: 768px) {
             body {
                 min-height: 100vh;
-                justify-content: flex-start;
+                justify-content: center; /* Вертикальное выравнивание по центру */
                 padding-top: 20px;
             }
 
@@ -167,13 +167,14 @@
             }
 
             h1 {
-                font-size: clamp(1.4rem, 4vw, 2.2rem); /* Увеличен шрифт */
+                font-size: clamp(1.4rem, 4vw, 2.2rem);
                 max-width: 90%;
                 line-height: 1.4;
+                margin-bottom: 15px; /* Отступ между заголовком и описанием */
             }
 
             p {
-                font-size: clamp(0.9rem, 2.5vw, 1.3rem); /* Увеличен шрифт */
+                font-size: clamp(0.9rem, 2.5vw, 1.3rem);
                 max-width: 95%;
                 line-height: 1.5;
             }
@@ -186,9 +187,10 @@
 
             a.button {
                 width: 100%;
-                max-width: 300px; /* Уменьшена максимальная ширина */
-                padding: 10px; /* Уменьшены отступы */
-                font-size: clamp(0.7rem, 1.5vw, 0.9rem); /* Уменьшен шрифт */
+                max-width: 300px;
+                padding: 10px;
+                font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+                min-height: 80px; /* Высота кнопок */
             }
 
             a.button .tooltip {
@@ -202,6 +204,7 @@
             .page-particle {
                 width: 12px;
                 height: 20px;
+                animation-duration: 20s !important; /* Оптимизация анимации: увеличение длительности для снижения нагрузки */
             }
 
             .page-particle:nth-child(1) { left: 5%; }
@@ -222,19 +225,21 @@
             }
 
             h1 {
-                font-size: clamp(1.2rem, 3.5vw, 1.8rem); /* Увеличен шрифт */
+                font-size: clamp(1.2rem, 3.5vw, 1.8rem);
                 max-width: 95%;
+                margin-bottom: 12px; /* Отступ между заголовком и описанием */
             }
 
             p {
-                font-size: clamp(0.8rem, 2.2vw, 1.1rem); /* Увеличен шрифт */
+                font-size: clamp(0.8rem, 2.2vw, 1.1rem);
                 max-width: 98%;
             }
 
             a.button {
-                padding: 8px; /* Ещё меньше отступы */
-                font-size: clamp(0.6rem, 1.4vw, 0.8rem); /* Ещё меньше шрифт */
-                max-width: 280px; /* Ещё меньше максимальная ширина */
+                padding: 8px;
+                font-size: clamp(0.6rem, 1.4vw, 0.8rem);
+                min-height: 80px; /* Высота кнопок */
+                max-width: 280px;
             }
 
             a.button .tooltip {
@@ -248,6 +253,7 @@
             .page-particle {
                 width: 10px;
                 height: 15px;
+                animation-duration: 25s !important; /* Оптимизация анимации */
             }
         }
 
