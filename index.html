@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh; /* Изменено с height на min-height */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -156,7 +156,7 @@
         @media (max-width: 768px) {
             body {
                 min-height: 100vh;
-                justify-content: flex-start; /* Контент начинается сверху */
+                justify-content: flex-start;
                 padding-top: 20px;
             }
 
@@ -167,13 +167,13 @@
             }
 
             h1 {
-                font-size: clamp(1.2rem, 3.5vw, 2rem);
+                font-size: clamp(1.4rem, 4vw, 2.2rem); /* Увеличен шрифт */
                 max-width: 90%;
                 line-height: 1.4;
             }
 
             p {
-                font-size: clamp(0.8rem, 2vw, 1.1rem);
+                font-size: clamp(0.9rem, 2.5vw, 1.3rem); /* Увеличен шрифт */
                 max-width: 95%;
                 line-height: 1.5;
             }
@@ -186,9 +186,9 @@
 
             a.button {
                 width: 100%;
-                max-width: 400px; /* Ограничение максимальной ширины */
-                padding: 12px;
-                font-size: clamp(0.8rem, 1.8vw, 1rem);
+                max-width: 300px; /* Уменьшена максимальная ширина */
+                padding: 10px; /* Уменьшены отступы */
+                font-size: clamp(0.7rem, 1.5vw, 0.9rem); /* Уменьшен шрифт */
             }
 
             a.button .tooltip {
@@ -222,19 +222,19 @@
             }
 
             h1 {
-                font-size: clamp(1rem, 3vw, 1.6rem);
+                font-size: clamp(1.2rem, 3.5vw, 1.8rem); /* Увеличен шрифт */
                 max-width: 95%;
             }
 
             p {
-                font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+                font-size: clamp(0.8rem, 2.2vw, 1.1rem); /* Увеличен шрифт */
                 max-width: 98%;
             }
 
             a.button {
-                padding: 10px;
-                font-size: clamp(0.7rem, 1.6vw, 0.9rem);
-                max-width: 100%;
+                padding: 8px; /* Ещё меньше отступы */
+                font-size: clamp(0.6rem, 1.4vw, 0.8rem); /* Ещё меньше шрифт */
+                max-width: 280px; /* Ещё меньше максимальная ширина */
             }
 
             a.button .tooltip {
