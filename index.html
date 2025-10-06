@@ -182,7 +182,6 @@
             }
 
             .buttons {
-                flex-direction: column; /* Кнопки друг под другом */
                 gap: 10px;
                 max-width: 100%;
                 justify-content: center;
@@ -199,6 +198,8 @@
                 justify-content: center;
                 box-shadow: none; /* Убрана тень при hover для оптимизации */
                 transition: transform 0.3s ease, border-radius 0.3s ease; /* Убрана тень из transition */
+                font-size: clamp(1.3rem, 1.4vw, 0.8rem);
+
             }
 
             a.button:hover {
@@ -329,3 +330,4 @@
     </script>
 </body>
 </html>
+
