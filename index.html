@@ -156,7 +156,7 @@
         @media (max-width: 768px) {
             body {
                 min-height: 100vh;
-                justify-content: center; /* Вертикальное выравнивание по центру */
+                justify-content: center; /* Центрирование по вертикали */
                 padding-top: 20px;
             }
 
@@ -164,13 +164,15 @@
                 padding: 10px;
                 gap: 12px;
                 max-width: 95%;
+                justify-content: center; /* Центрирование содержимого */
+                align-items: center;
             }
 
             h1 {
                 font-size: clamp(1.4rem, 4vw, 2.2rem);
                 max-width: 90%;
                 line-height: 1.4;
-                margin-bottom: 15px; /* Отступ между заголовком и описанием */
+                margin-bottom: 16px; /* Отступ между заголовком и описанием */
             }
 
             p {
@@ -180,17 +182,28 @@
             }
 
             .buttons {
-                flex-direction: column;
+                flex-direction: column; /* Кнопки друг под другом */
                 gap: 10px;
                 max-width: 100%;
+                justify-content: center;
+                align-items: center; /* Выравнивание по центру */
             }
 
             a.button {
-                width: 100%;
-                max-width: 300px;
+                width: 100%; /* На всю ширину экрана */
+                height: 80px; /* Фиксированная высота */
                 padding: 10px;
                 font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-                min-height: 80px; /* Высота кнопок */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: none; /* Убрана тень при hover для оптимизации */
+                transition: transform 0.3s ease, border-radius 0.3s ease; /* Убрана тень из transition */
+            }
+
+            a.button:hover {
+                transform: translateY(-6px) scale(1.02); /* Меньший масштаб для мобильных */
+                box-shadow: none;
             }
 
             a.button .tooltip {
@@ -204,14 +217,13 @@
             .page-particle {
                 width: 12px;
                 height: 20px;
-                animation-duration: 20s !important; /* Оптимизация анимации: увеличение длительности для снижения нагрузки */
             }
 
-            .page-particle:nth-child(1) { left: 5%; }
-            .page-particle:nth-child(2) { left: 25%; }
-            .page-particle:nth-child(3) { left: 45%; }
-            .page-particle:nth-child(4) { left: 65%; }
-            .page-particle:nth-child(5) { left: 85%; }
+            .page-particle:nth-child(1) { left: 15%; animation-duration: 8s; }
+            .page-particle:nth-child(2) { left: 45%; animation-duration: 10s; }
+            .page-particle:nth-child(3) { left: 75%; animation-duration: 9s; }
+            .page-particle:nth-child(4) { display: none; } /* Скрыты для оптимизации */
+            .page-particle:nth-child(5) { display: none; } /* Скрыты для оптимизации */
         }
 
         @media (max-width: 480px) {
@@ -227,7 +239,7 @@
             h1 {
                 font-size: clamp(1.2rem, 3.5vw, 1.8rem);
                 max-width: 95%;
-                margin-bottom: 12px; /* Отступ между заголовком и описанием */
+                margin-bottom: 16px; /* Отступ между заголовком и описанием */
             }
 
             p {
@@ -236,10 +248,10 @@
             }
 
             a.button {
+                width: 100%; /* На всю ширину экрана */
+                height: 80px; /* Фиксированная высота */
                 padding: 8px;
                 font-size: clamp(0.6rem, 1.4vw, 0.8rem);
-                min-height: 80px; /* Высота кнопок */
-                max-width: 280px;
             }
 
             a.button .tooltip {
@@ -253,8 +265,11 @@
             .page-particle {
                 width: 10px;
                 height: 15px;
-                animation-duration: 25s !important; /* Оптимизация анимации */
             }
+
+            .page-particle:nth-child(1) { left: 10%; animation-duration: 7s; }
+            .page-particle:nth-child(2) { left: 50%; animation-duration: 8s; }
+            .page-particle:nth-child(3) { left: 80%; animation-duration: 7.5s; }
         }
 
         body.fade-out {
